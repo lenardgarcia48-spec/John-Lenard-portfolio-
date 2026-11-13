@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Lenard Garcia | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>JOHN LENARD T. GARCIA</h1>
+    <p>BS Information Technology Student</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#java">Java Code</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h2>WELCOME TO MY PORTFOLIO!</h2>
+    <h3>I am John Lenard T. Garcia</h3>
+    <p>Aspiring Programmer | Future IT Professional</p>
+    <a href="#about" class="btn">Explore My Portfolio</a>
+</section>
+
+<section id="about" class="card">
+    <h2>Personal Information</h2>
+    <p><b>Name:</b> John Lenard T. Garcia</p>
+    <p><b>Age:</b> 18 Years Old</p>
+    <p><b>Nationality:</b> Filipino</p>
+    <p><b>Course:</b> BS Information Technology</p>
+    <p><b>School:</b> Our Lady of the Sacred Heart College of Guimba, Inc.</p>
+
+    <h3>About Me</h3>
+    <p>
+        Hello! I am John Lenard T. Garcia.
+        I am a hardworking and dedicated IT student.
+        I enjoy learning new things, exploring technology,
+        playing volleyball, dancing, taking nature pictures,
+        and drawing. My dream is to become a successful
+        IT professional and help my family.
+    </p>
+</section>
+
+<section id="education" class="card">
+    <h2>Educational Background</h2>
+
+    <div class="item">
+        <h3>Elementary</h3>
+        <p>Nagpandayan Elementary School</p>
+    </div>
+
+    <div class="item">
+        <h3>Junior High School</h3>
+        <p>Nagpandayan National High School</p>
+    </div>
+
+    <div class="item">
+        <h3>Senior High School</h3>
+        <p>Nagpandayan National High School</p>
+    </div>
+
+    <div class="item">
+        <h3>College</h3>
+        <p>Our Lady of the Sacred Heart College of Guimba, Inc.</p>
+        <p>Bachelor of Science in Information Technology</p>
+    </div>
+</section>
+
+<section id="skills" class="card">
+    <h2>My Skills and Competencies</h2>
+
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Java Programming</span>
+        <span>Computer Literacy</span>
+        <span>Problem Solving</span>
+        <span>Teamwork</span>
+        <span>Communication</span>
+        <span>Drawing</span>
+        <span>Creativity</span>
+    </div>
+
+    <h3>My Goals</h3>
+    <p>
+        I want to improve my programming skills,
+        finish my studies, become successful,
+        and help my family in the future.
+    </p>
+</section>
+
+<section id="java" class="card">
+    <h2>Java Programming Project</h2>
+    <p>
+        This section showcases my CC102 Final Performance Task.
+        My actual Java game source code will be presented here.
+    </p>
+
+    <pre><code>
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class NumberGuessingGame {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+
+        int secretNumber = random.nextInt(100) + 1;
+        int guess;
+        int attempts = 0;
+        int maxAttempts = 7;
+
+        System.out.println("================================");
+        System.out.println("      NUMBER GUESSING GAME");
+        System.out.println("================================");
+        System.out.println("Guess the number from 1 to 100.");
+        System.out.println("You have 7 attempts!");
+
+        while (attempts < maxAttempts) {
+
+            System.out.print("\nEnter your guess: ");
+
+            if (!input.hasNextInt()) {
+                System.out.println("Invalid input! Enter a number.");
+                input.next();
+                continue;
+            }
+
+            guess = input.nextInt();
+            attempts++;
+
+            if (guess == secretNumber) {
+                System.out.println("Congratulations! You won!");
+                System.out.println("Attempts used: " + attempts);
+                break;
+            } else if (guess < secretNumber) {
+                System.out.println("Too low! Try again.");
+            } else {
+                System.out.println("Too high! Try again.");
+            }
+        }
+
+        if (attempts == maxAttempts && guess != secretNumber) {
+            System.out.println("\nGame Over!");
+            System.out.println("The correct number was: " + secretNumber);
+        }
+
+        System.out.println("\nThank you for playing!");
+        input.close();
+    }
+}
+
+    </code></pre>
+</section>
+
+<section id="contact" class="card">
+    <h2>Contact Information</h2>
+    <p><b>Email:</b> lenardgarcia48@gmail.com</p>
+    <p><b>Location:</b> Guimba, Nueva Ecija, Philippines</p>
+</section>
+
+<footer>
+    <h3>THANK YOU FOR VISITING!</h3>
+    <p>BUILD DREAMS. CODE FUTURES.</p>
+    <p>© 2026 John Lenard T. Garcia</p>
+</footer>
+
+</body>
+  </html>
+                          
